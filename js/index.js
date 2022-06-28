@@ -24,7 +24,6 @@ setTimeout(() => {
   const fetchApi = new FetchWrapper(API_BASE_URL)
   fetchApi.get()
     .then(data => {
-      console.log(data)
       buildPage(data)
       preloaderPage()
       const orders = Object.values(data.orders).filter((order) => order.type === 'order')
